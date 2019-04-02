@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Somerdale Bar's Contact Information and Contact Form">
+    <meta name="author" content="Dan B">
+    <title>Contact Us | Somerdale Bar</title>
+
+    <!-- EXTERNAL  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- LOCAL -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+         $.get("includes/navbar.html", function (data) {
+            $("#myNav").replaceWith(data);
+        });
+    </script>
+    <script>
+         $.get("includes/footer.html", function (data) {
+            $("#footer").replaceWith(data);
+        });
+    </script>
+</head>
+
+<!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
+
+<body data-spy="scroll" data-target="#myNav">
+     <div id="myNav"></div>
+    <div class="m-0 border-left border-right">
+        <div class="container" style="padding-top:3.5rem">
+            <section class="my-4 mx-3">
+                <h2 class="text-center font-weight-bold fancy"><span class="px-3">CONTACT US</span></h2>
+                <div class="row pt-4" style="justify-content:center">
+                    <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                        <div class="wrap">
+                            <h4 class="text-center font-italic py-4">Location</h4>
+                            <!--  Google map api  -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3063.20414126617!2d-75.02357718510073!3d39.84725799800049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6cda436af533f%3A0x16801fb26568f9f7!2s209+N+White+Horse+Pike%2C+Somerdale%2C+NJ+08083!5e0!3m2!1sen!2sus!4v1551819286236" width="450" height="390" frameborder="0" style="border:0;width:100%" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                        <div class="wrap">
+                            <div class="text-center">
+                                <h4 class="font-italic py-4">Somerdale Bar</h4>
+                                <p class="mx-auto text-center">
+                                    (856) 435-8983<br />
+                                    209 North White Horse Pike<br />
+                                    Somerdale, NJ 08083
+                                </p>
+                            </div>
+                            <h4 class="font-italic py-4 text-center">Business Hours</h4>
+                            <p class="mx-auto text-center" style="width:11em">
+                                Monday:     11am-11pm<br />
+                                Tuesday:    11am-8pm<br />
+                                Wednesday:  11am-11pm<br />
+                                Thursday:   11am-11pm<br />
+                                Friday:     11am-11pm<br />
+                                Saturday:   11am-3am<br />
+                                Sunday:     12pm-10pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <div class="container">
+            <div id="contact"></div>
+            <!--Section: Contact v.2-->
+            <section class="my-4 mx-3">
+                <!--Section heading-->
+                <h2 class="h1-responsive font-weight-bold text-center fancy"><span class="px-3">GET IN TOUCH</span></h2>
+                <!--Section description-->
+                <p class="text-center w-responsive mx-auto mb-3">Questions or concerns? Contact us! We'll be sure to reply as soon as we can.</p>
+                
+                <div class="row border-between">
+                  
+                    <!--Grid column-->
+                    <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                        <div class="wrap">
+                            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name">
+                                            <label for="name" class="">Name</label>
+                                        </div>
+                                    </div>
+                                    <!--Grid column-->
+                                    <!--Grid column-->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="email" name="email" class="form-control" placeholder="examplemt@example.com">
+                                            <label for="email" class="">Your email</label>
+                                        </div>
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                                <!--Grid row-->
+                                <!--Grid row-->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+                                            <label for="subject" class="">Subject</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Grid row-->
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-md-12">
+
+                                        <div class="md-form">
+                                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Your message..."></textarea>
+                                            <label for="message">Your message</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--Grid row-->
+
+                            </form>
+
+                            <div class="text-center">
+                                <a class="btn btn-secondary" onclick="validateForm()">Send</a>
+                            </div>
+                            <div class="status"></div>
+                        </div>
+                    </div>  
+                    
+                    <!--Grid column-->
+                  <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                      <div class="wrap text-center">
+                          <ul class="list-unstyled my-2">
+                              <li>
+                                  <i class="fa fa-location-arrow mt-2"></i>
+                                  <p>Somerdale, NJ USA</p>
+                              </li>
+                              <li>
+                                  <i class="fa fa-phone mt-2"></i>
+                                  <p>(856) 435-9893</p>
+                              </li>
+                              <li>
+                                  <i class="fa fa-envelope mt-2"></i>
+                                  <p>contact@somerdalebar.com</p>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                </div>
+            </section>
+            <!--Section: Contact v.2-->
+        </div>
+    </div>
+    <div id="footer"></div>
+
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- shrinking the navbar -->
+
+</body>
+</html>
