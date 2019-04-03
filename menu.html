@@ -1,7 +1,6 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Somerdale Bar's Menus for Lunch, Dinner and Catering">
@@ -39,9 +38,9 @@
 <body data-spy="scroll" data-target="#myNavbar">
     <div id="myNavbar">
             <script>
-                    $(function(){
-                      $("#myNavbar").load("navbar.html"); 
-                    });
+                      $.get("navbar.html", function(data){
+                       $("#myNavbar").replaceWith(data);
+                   });
             </script>
     </div>
     <div id="page-top"></div>
@@ -331,9 +330,9 @@
     </section>
      <div id="myfooter">
             <script>
-                    $(function(){
-                      $("#myfooter").load("footer.html"); 
-                }); 
+                      $.get("footer.html", function(data){
+                       $("#myfooter").replaceWith(data);
+                   });
             </script>
     </div>
   
