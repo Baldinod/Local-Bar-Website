@@ -758,7 +758,7 @@ nav {
 .page-link:hover {
     color: #850005;
     background-color:#EDE1AC;
-    border: 2px solid #850005;
+    border: 2px solid #850005 !important;
     opacity: .7;
 }
 
