@@ -23,11 +23,11 @@
     <!-- LOCAL -->
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="http://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
     <script src="//code.jquery.com/jquery.min.js"></script>
@@ -41,19 +41,20 @@
         });
     </script>
     <script>
-         $.get("navbar.html", function (data) {
-            $("#myNav").replaceWith(data);
-        });
+    $(function(){
+      $("#myNavbar").load("navbar.html"); 
+    });
     </script>
     <script>
-        $.get("footer.html", function (data) {
-            $("#footer").replaceWith(data);
-        });
+            $(function(){
+              $("#myfooter").load("footer.html"); 
+        }); 
     </script>
+    
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
 <body>
-    <div id="myNav"></div>
+    <div id="myNavbar"></div>
     <div class="container p-0 m-0 w-100">
         <div class="container-fluid">
             <!--    Landing     -->
@@ -259,11 +260,10 @@
             <!--    End of Reviews  -->
         </div>
     </div>
-    <div id="footer"></div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <div id="myfooter"></div>
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script>
         // Get the modal
         var modal = document.getElementById('karaokeModal');
