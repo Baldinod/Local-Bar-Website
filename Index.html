@@ -28,7 +28,7 @@
 
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>
@@ -41,19 +41,18 @@
         });
     </script>
     <script>
-         $.get("../navbar.html", function (data) {
+         $.get("navbar.html", function (data) {
             $("#myNav").replaceWith(data);
         });
     </script>
     <script>
-        $.get("../footer.html", function (data) {
+        $.get("footer.html", function (data) {
             $("#footer").replaceWith(data);
         });
     </script>
-
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
-<body data-spy="scroll" data-target="#myNav">
+<body>
     <div id="myNav"></div>
     <div class="container p-0 m-0 w-100">
         <div class="container-fluid">
@@ -309,9 +308,6 @@
             modal.style.display = "none";
         }
     </script>
-</body>
-</html>
-
 <div id="preload">
     <img src="css/img/bar_corner.jpg" />
     <img src="css/img/pool.jpg" />
@@ -321,3 +317,5 @@
     <img src="css/img/pool-table.jpg" />
     <img src="css/img/karaoke.jpg" />
 </div>
+</body>
+</html>
