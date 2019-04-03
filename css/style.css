@@ -737,11 +737,7 @@ nav {
         transition: all .20s linear;
         text-decoration: none;
     }
-
-    .footlink:active{
-
-    }
-
+    
 .pagination{
     display: block;
     justify-content: center;
@@ -1292,9 +1288,6 @@ section {
     text-decoration: none;
 }
 
-section > hr {
-}
-
 .pb-3, .py-3 {
     padding-bottom: 1rem !important;
 }
@@ -1360,10 +1353,10 @@ p {
     font-size: 1rem;
 }
 
-\
+
 .quotation {
     font-size: 30px;
-    //margin: 0 auto;
+    margin: 0 auto;
     quotes: "\201C""\201D""\2018""\2019";
     padding: 10px 20px;
     line-height: 1.4;
