@@ -255,16 +255,17 @@
             <!--    End of Reviews  -->
         </div>
     </div>
-    <div id="myfooter"></div>
+    <div id="myfooter">
+            <script>
+                    $.get("footer.html", function(data){
+                      $("#myfooter").replaceWith(data);
+                  });
+           </script>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     
-               <script>
-             $.get("footer.html", function(data){
-               $("#myfooter").replaceWith(data);
-           });
-               </script>
     <script>
         // Get the modal
         var modal = document.getElementById('karaokeModal');

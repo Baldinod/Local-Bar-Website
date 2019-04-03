@@ -24,7 +24,7 @@
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
-    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
     <script>
         $(function () {
             $('a').each(function () {
@@ -34,20 +34,16 @@
             });
         });
     </script>
-  <script>
-        $(function(){
-          $("#myNavbar").load("navbar.html"); 
-        });
-        </script>
-        <script>
-                $(function(){
-                  $("#myfooter").load("footer.html"); 
-            }); 
-        </script>
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
 <body data-spy="scroll" data-target="#myNav">
-    <div id="myNavbar"></div>
+    <div id="myNavbar">
+            <script>
+                    $(function(){
+                      $("#myNavbar").load("navbar.html"); 
+                    });
+            </script>
+    </div>
     <div id="page-top"></div>
     <div class="parallax2" style="margin-bottom:0rem">
         <div class="parallaxcaption" id="top">
@@ -319,7 +315,7 @@
                         <div class="container-fluid">
                             <h5 class="font-weight-bold">
                                 View our menu<i class="px-4 fa fa-long-arrow-alt-right" style="transform: scaleX(3);"></i>
-                                <img id="caterImg" src="css/img/cater-menu.jpg" class="rounded" style="width:20%;max-width:300px;" alt="Catering Menu - Somerdale Bar">
+                                <img id="caterImg" src="../css/img/cater-menu.jpg" class="rounded" style="width:20%;max-width:300px;" alt="Catering Menu - Somerdale Bar">
                             </h5>
                             <!-- The Modal -->
                             <div id="myModal" class="modal">
@@ -333,7 +329,13 @@
             </div>
         </div>
     </section>
-    <div id="myfooter"></div>
+    <div id="myfooter">
+            <script>
+                    $(function(){
+                      $("#myfooter").load("footer.html"); 
+                }); 
+            </script>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -367,8 +369,8 @@
     </script>
     <!--    Preload images use on screen    -->
     <div id="preload">
-        <img src="css/img/steak.jpg" />
-        <img src="css/img/cater-menu.jpg" />
+        <img src="../css/img/steak.jpg" />
+        <img src="../css/img/cater-menu.jpg" />
     </div>
 </body>
 </html>

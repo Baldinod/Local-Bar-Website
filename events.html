@@ -24,7 +24,7 @@
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
-    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
     <script>
         $(function () {
             $('a').each(function () {
@@ -35,11 +35,6 @@
         });
     </script>
     <script>
-         $.get("../navbar.html", function (data) {
-            $("#myNav").replaceWith(data);
-        });
-    </script>
-    <script>
          $.get("../footer.html", function (data) {
             $("#footer").replaceWith(data);
         });
@@ -47,7 +42,13 @@
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
 <body data-spy="scroll" data-target="#myNav">
-    <div id="myNav"></div>
+    <div id="myNav">
+            <script>
+                    $(function(){
+                      $("#myNavbar").load("navbar.html"); 
+                    });
+                    </script>
+    </div>
     <section class="my-4 px-3 pt-3">
         <div class="container" style="padding-top:3.5rem !important">
             <div class="wrap">
@@ -56,7 +57,13 @@
             </div>
         </div>
         </section>
-        <div id="footer"></div>
+        <div id="footer">
+                <script>
+                        $(function(){
+                          $("#myfooter").load("footer.html"); 
+                        });
+                        </script>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
