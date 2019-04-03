@@ -37,13 +37,13 @@
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
 <body data-spy="scroll" data-target="#myNavbar">
-    <div id="myNavbar">
-            <script>
-                    $(function(){
-                      $("#myNavbar").load("navbar.html"); 
-                    });
-            </script>
-    </div>
+        <div id="myNavbar">
+                <script>
+                        $.get("navbar.html", function(data){
+                           $("#myNavbar").replaceWith(data);
+                       });
+                           </script>
+        </div>
     <section class="my-4 px-3 pt-3">
         <div class="container" style="padding-top:3.5rem !important">
             <div class="wrap">
@@ -52,7 +52,7 @@
             </div>
         </div>
         </section>
-        <div id="footer">
+        <div id="myfooter">
                 <script>
                         $.get("footer.html", function(data){
                            $("#myfooter").replaceWith(data);
@@ -70,7 +70,6 @@
         </script>
         <!--    Preload images use on screen    -->
         <div id="preload">
-
         </div>
 </body>
 </html>
