@@ -34,15 +34,10 @@
             });
         });
     </script>
-    <script>
-         $.get("../footer.html", function (data) {
-            $("#footer").replaceWith(data);
-        });
-    </script>
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
-<body data-spy="scroll" data-target="#myNav">
-    <div id="myNav">
+<body data-spy="scroll" data-target="#myNavbar">
+    <div id="myNavbar">
             <script>
                     $(function(){
                       $("#myNavbar").load("navbar.html"); 
@@ -59,10 +54,10 @@
         </section>
         <div id="footer">
                 <script>
-                        $(function(){
-                          $("#myfooter").load("footer.html"); 
-                        });
-                        </script>
+                        $.get("footer.html", function(data){
+                           $("#myfooter").replaceWith(data);
+                       });
+                           </script>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

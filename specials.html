@@ -39,10 +39,10 @@
 <body data-spy="scroll" data-target="#myNavbar">
     <div id="myNavbar">
             <script>
-                    $(function(){
-                      $("#myNavbar").load("navbar.html"); 
-                    });
-                    </script>
+                    $.get("navbar.html", function(data){
+                       $("#myNavbar").replaceWith(data);
+                   });
+                       </script>
     </div>
     <div class="container p-4" style="padding-top:3.5rem !important">
         <section class="my-4 px-3 pt-3">
