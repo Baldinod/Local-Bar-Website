@@ -21,16 +21,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- LOCAL -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
-    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
     <script>
         $(function () {
             $('a').each(function () {
@@ -40,21 +39,17 @@
             });
         });
     </script>
-    <script>
-    $(function(){
-      $("#myNavbar").load("navbar.html"); 
-    });
-    </script>
-    <script>
-            $(function(){
-              $("#myfooter").load("footer.html"); 
-        }); 
-    </script>
     
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
 <body>
-    <div id="myNavbar"></div>
+    <div id="myNavbar">
+            <script>
+                    $.get("navbar.html", function(data){
+                       $("#myNavbar").replaceWith(data);
+                   });
+                       </script>
+    </div>
     <div class="container p-0 m-0 w-100">
         <div class="container-fluid">
             <!--    Landing     -->
@@ -69,16 +64,16 @@
                     </ol>
                     <div class="carousel-inner embed-responsive embed-responsive-16by9" role="listbox">
                         <div class="carousel-item embed-responsive-item active">
-                            <img src="css/img/budSign.jpg" alt="First slide image" class="img-fluid">
+                            <img src="../css/img/budSign.jpg" alt="First slide image" class="img-fluid">
                         </div>
                         <div class="carousel-item embed-responsive-item">
-                            <img src="css/img/bar-corner.jpg" alt="Second slide image" class="img-fluid">
+                            <img src="../css/img/bar-corner.jpg" alt="Second slide image" class="img-fluid">
                         </div>
                         <div class="carousel-item embed-responsive-item">
-                            <img src="css/img/pool.jpg" alt="Third slide image" class="img-fluid">
+                            <img src="../css/img/pool.jpg" alt="Third slide image" class="img-fluid">
                         </div>
                         <div class="carousel-item embed-responsive-item">
-                            <img src="css/img/barView.jpg" alt="Third slide image" class="img-fluid">
+                            <img src="../css/img/barView.jpg" alt="Third slide image" class="img-fluid">
                         </div>
                         <div class="landingBut d-flex">
                             <a href="#about" role="button">
@@ -164,7 +159,7 @@
                     <h2 class="text-center font-weight-bold fancy"><span class="px-3">Entertainment</span></h2>
                     <div class="row d-flex justify-content-around pt-4">
                         <div class="d-flex justify-content-center">
-                            <img id="karaokeImg" src="css/img/karaoke.jpg" class="rounded" style="height:100%;width:100%;max-width:300px;" alt="Karaoke - Somerdale Bar">
+                            <img id="karaokeImg" src="../css/img/karaoke.jpg" class="rounded" style="height:100%;width:100%;max-width:300px;" alt="Karaoke - Somerdale Bar">
                             <!-- The Modal -->
                             <div id="karaokeModal" class="modal">
                                 <span class="close">&times;</span>
@@ -177,7 +172,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <img id="poolImg" src="css/img/pool.jpg" class="rounded" style="height:100%;width:100%;max-width:300px;" alt="Pool - Somerdale Bar">
+                            <img id="poolImg" src="../css/img/pool.jpg" class="rounded" style="height:100%;width:100%;max-width:300px;" alt="Pool - Somerdale Bar">
                             <!-- The Modal -->
                             <div id="poolModal" class="modal">
                                 <span class="close2">&times;</span>
@@ -260,18 +255,16 @@
             <!--    End of Reviews  -->
         </div>
     </div>
-<<<<<<< HEAD
     <div id="myfooter"></div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-=======
-    <div id="footer"></div>
-
-    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
->>>>>>> cd99eaca2d15ba18df7c45fe789a51f552dfacb0
+    
+               <script>
+             $.get("footer.html", function(data){
+               $("#myfooter").replaceWith(data);
+           });
+               </script>
     <script>
         // Get the modal
         var modal = document.getElementById('karaokeModal');
@@ -317,13 +310,13 @@
         }
     </script>
 <div id="preload">
-    <img src="css/img/bar_corner.jpg" />
-    <img src="css/img/pool.jpg" />
-    <img src="css/img/budSign.jpg" />
-    <img src="css/img/liquor.jpg" />
-    <img src="css/img/happyHour.jpg" />
-    <img src="css/img/pool-table.jpg" />
-    <img src="css/img/karaoke.jpg" />
+    <img src="../css/img/bar_corner.jpg" />
+    <img src="../css/img/pool.jpg" />
+    <img src="../css/img/budSign.jpg" />
+    <img src="../css/img/liquor.jpg" />
+    <img src="../css/img/happyHour.jpg" />
+    <img src="../css/img/pool-table.jpg" />
+    <img src="../css/img/karaoke.jpg" />
 </div>
 </body>
 </html>
