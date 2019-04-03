@@ -745,7 +745,8 @@ nav {
 }
 
 .page-link {
-    color: #E2E8E6;
+    cursor: pointer;
+    color: #EDE1AC;
     background-color: #27633E;
     width: 10em;
     max-width: 100%;
@@ -756,7 +757,8 @@ nav {
 
 .page-link:hover {
     color: #850005;
-    background-color:#E2E8E6;
+    background-color:#EDE1AC;
+    border: 2px solid #850005;
     opacity: .7;
 }
 
@@ -785,10 +787,11 @@ nav {
 
 .landingBut a{
     opacity: .8;
-    color:#EDE1AC;
+    color:#27633E;
 }
 
 .landingBut:hover a{
+    opacity: 1;
     cursor: pointer;
     text-decoration: none;
     transform:scale(1.5,1.5);
@@ -986,9 +989,6 @@ section {
     }
 
     .top-button:hover .fa {
-        -webkit-animation:bounce 0.5s forwards;
-        -moz-animation: bounce 0.5s forwards;
-        animation: bounce 0.5s forwards;
         text-decoration: none;
     }
     .top-button:active {
