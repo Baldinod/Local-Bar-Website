@@ -950,6 +950,10 @@ section {
     min-height: calc(100% - 70px);
 }
 
+section:nth-of-type(3) .carousel-item{
+    padding-bottom: 2rem;
+}
+
 .btn {
     cursor: pointer;
 
