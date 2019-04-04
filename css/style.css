@@ -518,7 +518,6 @@ hr1 {
 
 .card {
     height: 190px;
-    width: 200px;
 }
 
 .card-header {
@@ -1398,10 +1397,6 @@ p {
 
         #accordion .card {
             display: inline;
-        }
-
-        .card{
-            width: 200px;
         }
 
     .card-deck{
