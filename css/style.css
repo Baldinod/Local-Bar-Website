@@ -1254,7 +1254,7 @@ section:nth-of-type(3) .carousel-item{
     opacity: .8;
 }
 
-.parallax3:hover .specBorder, .parallax3:hover{
+.parallax3:hover .specBorder{
     color: #27633E;
     background-color: #EDE1AC;
     border: 2px solid #850005;
