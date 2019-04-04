@@ -964,7 +964,7 @@ section:nth-of-type(3) .carousel-item{
     border: 1px solid #850005;
 }
 
-#contact-form:hover .btn{
+section:nth-of-type(2) #contact .btn:hover{
     color:#27633E;
     background-color:#EDE1AC;
     border: 2px solid #850005;
