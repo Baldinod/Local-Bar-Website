@@ -24,8 +24,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
     <script src="//code.jquery.com/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.css">
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.css"></script>
+    <link rel="php">
     <script>
         $(function () {
             $('a').each(function () {
@@ -93,9 +93,10 @@
                 <!--Section description-->
                 <p class="text-center w-responsive mx-auto mb-3">Questions or concerns? Contact us! We'll be sure to reply as soon as we can.</p>
                 
-                <div class="row border-between">         
+                <div class="row">         
                             <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
-                                    <form id ="contact-form" name="contact-form" action="mail.php" method="POST"  onsubmit="return validateForm()" >
+                                 <div class="wrap">  
+                                   <form id ="contact-form" name="contact-form" action="mail.php" method="POST"  onsubmit="return validateForm()" >
                                         <!--Grid row-->
                                         <div class="row">             
                                             <!--Grid column-->
@@ -155,6 +156,7 @@
                                     </div> 
                                     <div class="status" id="status"></div>
                                 </div>
+                            </div>
                   <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
                       <div class="wrap text-center">
                           <ul class="list-unstyled my-2">
