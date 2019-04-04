@@ -27,16 +27,6 @@
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $('a').each(function () {
-                if ($(this).prop('href') == window.location.href) {
-                    $(this).addClass('active'); $(this).parents('li').addClass('active');
-                }
-            });
-        });
-    </script>
     
 </head>
 <!-- add alt tags to each <img src="#" alt="helps search engines find you"/>  -->
@@ -263,7 +253,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    
+    <script>
+            $(function () {
+                $('a').each(function () {
+                    if ($(this).prop('href') == window.location.href) {
+                        $(this).addClass('active'); $(this).parents('li').addClass('active');
+                    }
+                });
+            });
+        </script>
     <script>
         // Get the modal
         var modal = document.getElementById('karaokeModal');
