@@ -700,7 +700,6 @@ footer .icon-wrap .icon:hover {
      */
 
  #gallery{
-     display: flex;
      justify-content: space-evenly;
  }
 
@@ -1420,7 +1419,7 @@ p {
 
     .img-fluid {
         height: 100%;;
-        width: 100:
+        width: 100%;
     }
 
     .navbar-brand {
@@ -1435,6 +1434,10 @@ p {
             display: flex;
             flex-direction: row;
     }
+
+.parallaxcaption{
+    display: block;
+}
 
    .wrap{
        height:auto
