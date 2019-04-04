@@ -958,7 +958,7 @@ section:nth-of-type(3) .carousel-item{
     cursor: pointer;
 }
 
-#contact-form .btn{
+#contact-btn .btn{
     background-color:#27633E;
     color:#EDE1AC;
     border: 1px solid #850005;
