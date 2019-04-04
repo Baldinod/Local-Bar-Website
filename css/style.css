@@ -956,7 +956,18 @@ section:nth-of-type(3) .carousel-item{
 
 .btn {
     cursor: pointer;
+}
 
+#contact-form .btn{
+    background-color:#27633E;
+    color:#EDE1AC;
+    border: 1px solid #850005;
+}
+
+#contact-form .btn:hover{
+    color:#27633E;
+    background-color:#EDE1AC;
+    border: 2px solid #850005;
 }
 
 .card-deck:hover .card{
@@ -966,7 +977,7 @@ section:nth-of-type(3) .carousel-item{
 
 .top-button {
     display: inline-block;
-    background-color: #09080A;
+    background-color: #27633E;
     border: 2px solid #850005; 
     width: 50px;
     height: 50px;
@@ -983,11 +994,12 @@ section:nth-of-type(3) .carousel-item{
     .top-button .fa {
         padding: 16px;
         vertical-align: middle;
-        color: #27633E;
+        color: #EDE1AC;
     }
 
     .top-button:hover {
         background-color: #EDE1AC;
+        color: #27633E;
     }
 
     .top-button:hover .fa {
