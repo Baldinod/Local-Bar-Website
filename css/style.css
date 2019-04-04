@@ -565,11 +565,11 @@ hr1 {
     }
 
 .card-img1:hover {
-    opacity: 1;
+    opacity: .7;
 }
 
 .card-img2:hover {
-    opacity: 1;
+    opacity: .7;
 }
 
 .card-img-top{
