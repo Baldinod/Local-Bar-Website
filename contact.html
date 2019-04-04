@@ -25,7 +25,6 @@
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-526RRG4"></script>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.css"></script>
-    <link rel="php">
     <script>
         $(function () {
             $('a').each(function () {
@@ -181,11 +180,6 @@
         </div>
     </div>
     <div id="myfooter">
-            <script>
-                    $(function(){
-                      $("#myfooter").load("footer.html"); 
-                }); 
-            </script>
     </div>
 
      <!-- jQuery library -->
@@ -198,6 +192,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script>
+             $(function(){
+                      $("#myfooter").load("footer.html"); 
+                }); 
 
         function validateForm() {
             var x = document.getElementById('name').value;
