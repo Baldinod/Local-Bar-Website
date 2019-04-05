@@ -958,6 +958,7 @@ section:nth-of-type(3) .carousel-item{
     cursor: pointer;
 }
 
+
 #contact-btn .btn{
     background-color:#27633E;
     color:#EDE1AC;
@@ -1541,10 +1542,6 @@ p {
     }
 }
 @media (min-width: 1200px) {
-
-    .card-columns {
-        column-count: 3;
-    }
 
     .container {
         width: 100% !important;
