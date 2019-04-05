@@ -159,8 +159,9 @@
                 <div class="container-fluid">
                     <h2 class="text-center font-weight-bold fancy"><span class="px-3">FOR THE CUSTOMER</span></h2>
                     <div class="row d-flex justify-content-around pt-4" style="padding:0 7.5px 0 7.5px !important">
-                        <div class="d-flex justify-content-center">
-                            <img id="karaokeImg" src="../css/img/karaoke.jpg" class="rounded" style="height:100%;width:100%;max-width:300px;" alt="Karaoke | Night Life | Somerdale Bar">
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <img id="karaokeImg" src="../css/img/karaoke.jpg" class="rounded"
+                                style="height:100%;width:100%;max-width:300px;" alt="Karaoke | Night Life | Somerdale Bar">
                             <!-- The Modal -->
                             <div id="karaokeModal" class="modal">
                                 <span class="close">&times;</span>
@@ -168,35 +169,40 @@
                                     <h2 class="text-center font-weight-bold">Karaoke Saturday Nights!</h2>
                                     <h5 class="text-center">Join DJs Brian Nolan & Rod MacRae <br />10 PM to 3 AM</h5>
                                     <div id="caption">
-                                        <p class="text-center">Having over 50k of songs to sing to, Brian and Rod truly top the weekend off with an evening that you won't forget!</p>
+                                        <p class="text-center">Having over 50k of songs to sing to, Brian and Rod truly top the weekend
+                                            off with an evening that you won't forget!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                                <div class="row my-4 pt-4">
-                                    <div class="col-md-6" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
-                                        <div class="wrap">
-                                            <div class="font-weight-bold">
-                                                <h2 class="text-center font-weight-bold fancy mb-4"><span class="px-3">GIFT CERTIFICATES</span></h2>
-                                                <img id="gift" src="css/img/giftCertWM.jpg" class="rounded" style="width:20%;max-width:300px;"
-                                                    alt="Somerdale Bar's official gift certificate for any occassion">
-                                            </div>
-                                            <!-- The Modal -->
-                                            <div id="certModal" class="modal">
-                                                <span class="close">&times;</span>
-                                                <img class="modal-content" id="giftImg01">
-                                                <div id="caption"></div>
-                                            </div>
+                        <div class="col-md-7">
+                            <div class="row my-4 pt-4">
+                                <div class="col-md-6" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                                    <div class="wrap">
+                                        <div class="font-weight-bold">
+                                            <h2 class="text-center font-weight-bold fancy mb-4"><span class="px-3">GIFT
+                                                    CERTIFICATES</span></h2>
+                                            <img id="gift" src="css/img/giftCertWM.jpg" class="rounded"
+                                                style="width:20%;max-width:300px;"
+                                                alt="Somerdale Bar's official gift certificate for any occassion">
                                         </div>
-                                    </div>
-                                    <div class="col-md-6" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
-                                        <div class="wrap">
-                                            <h4 class="text-center"></h4>
+                                        <!-- The Modal -->
+                                        <div id="certModal" class="modal">
+                                            <span class="close">&times;</span>
+                                            <img class="modal-content" id="giftImg01">
+                                            <div id="caption"></div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-6" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                                    <div class="wrap">
+                                        <h4 class="text-center"></h4>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
                     </div>
+                </div>
                 </div>
             </section>
             <!--    end of Specials     -->
@@ -278,7 +284,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <!--    Modals    -->
+    <!--    Karaoke  Modal    -->
     <script>
         // Get the modal
         var modal = document.getElementById('karaokeModal');
@@ -341,6 +347,7 @@
         span.onclick = function () {
             modal.style.display = "none";
         }
+
     </script>
 <div id="preload">
     <img src="../css/img/bar_corner.jpg" alt="Somerdale Bar Inside Scene" />
