@@ -518,6 +518,8 @@ hr1 {
 
 .card {
     height: 210px;
+    background-color: inherit;
+    border: none;
 }
 
 .card-header {
