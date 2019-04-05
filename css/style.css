@@ -1504,6 +1504,11 @@ p {
         .navbar-brand {
             display: block;
         }
+
+        .parallaxcaption{
+            display: flex
+        }
+
         .tab-content > .active {
             display: block;
         }
