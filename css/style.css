@@ -1681,7 +1681,7 @@ p {
 }
 
 /* The Close Button */
-.close {
+.close, .close1 {
     position: absolute;
     top: 65px;
     right: 65px;
