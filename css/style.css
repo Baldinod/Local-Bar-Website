@@ -631,6 +631,11 @@ list-group-flush .list-group-item {
     transition: all .4s ease;
 }
 
+.giftccert{
+    background-image: url('img/giftCert.jpg');
+
+}
+
     footer {
     width: 100%;
     background-color: #d2b48c;
