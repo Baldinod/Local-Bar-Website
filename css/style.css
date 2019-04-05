@@ -564,14 +564,6 @@ hr1 {
         animation: fadeIn .3s ease-in-out;
     }
 
-.card-img1:hover {
-    opacity: .7;
-}
-
-.card-img2:hover {
-    opacity: .7;
-}
-
 .card-img-top{
     height: inherit !important;
 }
