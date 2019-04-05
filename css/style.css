@@ -627,6 +627,10 @@ list-group-flush .list-group-item {
     border-radius: 0;
 }
 
+#accordion{
+    transition: all .4s ease;
+}
+
     footer {
     width: 100%;
     background-color: #d2b48c;
