@@ -168,8 +168,8 @@
                                     <h2 class="text-center font-weight-bold">Join us Saturday Nigts<br />10 PM - 2 AM<</h2>
                                     <h5>DJ name & DJ name</h5>
                                     <p class="text-center">With over 50k of your favorite songs to choose from!</p>
+                                    <div id="caption"></div>
                                 </div>
-                                <div id="caption"></div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -179,8 +179,8 @@
                                 <span class="close2">&times;</span>
                                 <div class="modal-content" id="pool01">
                                     <h2 class="text-center font-weight-bold">Come play pool, Golden Tee, or darts</h2>
+                                    <div id="poolcaption"></div>
                                 </div>
-                                <div id="caption"></div>
                             </div>
                         </div>
                     </div>
@@ -287,15 +287,14 @@
         span.onclick = function () {
             modal.style.display = "none";
         }
-    </script>
-    <script>
+ 
         // Get the modal
         var modal = document.getElementById('poolModal');
 
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         var img = document.getElementById('poolImg');
         var modalImg = document.getElementById("pool01");
-        var captionText = document.getElementById("caption");
+        var captionText = document.getElementById("poolcaption");
         img.onclick = function () {
             modal.style.display = "block";
             modalImg.src = this.src;

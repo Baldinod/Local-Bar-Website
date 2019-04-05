@@ -1619,7 +1619,7 @@ p {
     max-width: 700px;
 }
 /* Caption of Modal Image */
-#caption {
+#caption, #poolcaption {
     margin: auto;
     display: block;
     width: 80%;
@@ -1631,7 +1631,7 @@ p {
 }
 
 /* Add Animation */
-.modal-content, #caption {
+.modal-content, #caption, #poolcaption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -1701,7 +1701,7 @@ p {
 }
 
 @media only screen and (max-width: 500px) {
-    .focus {
+    .fancy {
         display: none
     }
 }
