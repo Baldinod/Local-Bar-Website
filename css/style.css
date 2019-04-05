@@ -1572,7 +1572,7 @@ p {
     text-align: right;
 }
 
-#caterImg {
+#caterImg, #gift {
     box-shadow: 1px 1px 1px 1px black;
     border-radius: 5px;
     cursor: pointer;
