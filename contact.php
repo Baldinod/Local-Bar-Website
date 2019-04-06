@@ -1,4 +1,20 @@
-﻿<!DOCTYPE html>
+<?php
+
+if($_POST["submit"]) {
+    $recipient="Somerdalebarandgrill@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! We will get back to you shortly!.</p>";
+}
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -94,66 +110,16 @@
                 
                 <div class="row">         
                             <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
-                                 <div class="wrap">  
-                                   <form id ="contact-form" name="contact-form" action="mail.php" method="POST"  onsubmit="return validateForm()" >
-                                        <!--Grid row-->
-                                        <div class="row">             
-                                            <!--Grid column-->
-                                            <div class="col-md-6">
-                                                <div class="md-form">
-                                                    <div class="md-form">
-                                                        <input type="text" id="name" name="name" class="form-control" placeholder="Your name">
-                                                        <label for="name" class="">Name</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--Grid column-->
-                
-                                            <!--Grid column-->
-                                            <div class="col-md-6">
-                                                <div class="md-form">
-                                                    <div class="md-form">
-                                                        <input type="text" id="email" name="email" class="form-control" placeholder="example@website.com">
-                                                        <label for="email" class="">Email</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--Grid column-->
-                
-                                        </div>
-                                        <!--Grid row-->
-                
-                                        <!--Grid row-->
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="md-form">
-                                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Whats your message">
-                                                    <label for="subject" class="">Subject</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--Grid row-->
-                
-                                        <!--Grid row-->
-                                        <div class="row">
-                
-                                            <!--Grid column-->
-                                            <div class="col-md-12">
-                
-                                                <div class="md-form">
-                                                    <textarea type="text" id="message" name="message" class="form-control"></textarea>
-                                                    <label for="message">Your message</label>
-                                                </div>
-                
-                                            </div>
-                                        </div>
-                                        <!--Grid row-->
-                
+                                 <div class="wrap text-center">  
+                                    <form method="post" action="contact.php">
+                                            <label>Name:</label>
+                                            <input name="sender">
+                                            <label>Email address:</label>
+                                            <input name="senderEmail">
+                                            <label>Message:</label>
+                                            <textarea rows="5" cols="20" name="message"></textarea>
+                                            <input type="submit" name="submit">
                                     </form>
-                                    <div id="contact-btn" class="center-on-small-only text-center">
-                                        <a class="btn btn-secondary" onclick="validateForm()">Send</a>
-                                    </div> 
-                                    <div class="status" id="status"></div>
                                 </div>
                             </div>
                   <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
