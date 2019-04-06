@@ -16,7 +16,7 @@ $thankYou="<p>Thank you! We will be in contact with you shortly.</p>";
 
 }
 ?>
-<form action="contactForm.html" method="get" id="spaceing" data-abide>
+<form action="contactForm.php" method="get" id="spaceing" data-abide>
         <div class="form-bg">
             <div class="row">
                 <div id="name" class="large-6 medium-6 small-12 columns">
