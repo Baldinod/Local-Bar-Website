@@ -11,9 +11,11 @@ if($_POST["submit"]) {
 
     mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
 
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,42 +110,60 @@ if($_POST["submit"]) {
                 <!--Section description-->
                 <p class="text-center w-responsive mx-auto mb-3">Questions or concerns? Contact us! We'll be sure to reply as soon as we can.</p>
                 
-                <div class="row">         
-                            <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
-                                 <div class="wrap">  
-                                       <form method="post" action="contact.php">
-                                           <? $thankYou="<p>Thank you! Your message has been sent.</p>"; ?>
-        <label>Name:</label>
-        <input name="sender">
-
-        <label>Email address:</label>
-        <input name="senderEmail">
-
-        <label>Message:</label>
-        <textarea rows="5" cols="20" name="message"></textarea>
-
-        <input type="submit" name="submit">
-    </form>
+                <div class="row">
+                    <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                        <form name="frmContact" id="frmContact" method="post" action="" enctype="multipart/form-data"
+                            onsubmit="return validateContactForm()">
+                
+                            <div class="input-row">
+                                <label style="padding-top: 20px;">Name</label> <span id="userName-info" class="info"></span><br />
+                                <input type="text" class="input-field" name="userName" id="userName" placeholder="Name"
+                            </div>
+                            <div class="input-row">
+                                <label>Email</label> <span id="userEmail-info" class="info"></span><br /> <input type="text"
+                                    class="input-field" name="userEmail" id="userEmail" placeholder="email@example.com"/>
+                            </div>
+                            <div class="input-row">
+                                <label>Subject</label> <span id="subject-info" class="info"></span><br /> <input type="text"
+                                    class="input-field" name="subject" id="subject" placeholder="topic" />
+                            </div>
+                            <div class="input-row">
+                                <label>Message</label> <span id="userMessage-info" class="info"></span><br />
+                                <textarea name="content" id="content" class="input-field" cols="60" rows="6"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" name="send" class="btn-submit" value="Send" />
+                
+                                <div id="statusMessage">
+                                    <?php
+                                        if (! empty($message)) {
+                                    ?>
+                                    <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                                    <?php
+                                         }
+                                        ?>
                                 </div>
                             </div>
-                  <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
-                      <div class="wrap text-center">
-                          <ul class="list-unstyled my-2">
-                              <li>
-                                  <i class="fa fa-location-arrow mt-2"></i>
-                                  <p>Somerdale, NJ USA</p>
-                              </li>
-                              <li>
-                                  <i class="fa fa-phone mt-2"></i>
-                                  <p>(856) 435-9893</p>
-                              </li>
-                              <li>
-                                  <i class="fa fa-envelope mt-2"></i>
-                                  <p>SomerdaleBarandGrill@gmail.com</p>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
+                        <div class="wrap text-center">
+                            <ul class="list-unstyled my-2">
+                                <li>
+                                    <i class="fa fa-location-arrow mt-2"></i>
+                                    <p>Somerdale, NJ USA</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone mt-2"></i>
+                                    <p>(856) 435-9893</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope mt-2"></i>
+                                    <p>SomerdaleBarandGrill@gmail.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!--Section: Contact v.2-->
@@ -165,58 +185,46 @@ if($_POST["submit"]) {
              $(function(){
                       $("#myfooter").load("footer.html"); 
                 }); 
+    </script>
+    <script type="text/javascript">
+        function validateContactForm() {
+            var valid = true;
 
-        function validateForm() {
-            var x = document.getElementById('name').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Name cannot be empty";
-                return false;
+            $(".info").html("");
+            $(".input-field").css('border', '#e0dfdf 1px solid');
+            var userName = $("#userName").val();
+            var userEmail = $("#userEmail").val();
+            var subject = $("#subject").val();
+            var content = $("#content").val();
+            
+            if (userName == "") {
+                $("#userName-info").html("Required.");
+                $("#userName").css('border', '#e66262 1px solid');
+                valid = false;
             }
-            x = document.getElementById('email').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Email cannot be empty";
-                return false;
-            } else {
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                if (!re.test(x)) {
-                    document.getElementById('status').innerHTML = "Email format invalid";
-                    return false;
-                }
+            if (userEmail == "") {
+                $("#userEmail-info").html("Required.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
             }
-            x = document.getElementById('subject').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Subject cannot be empty";
-                return false;
+            if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/))
+            {
+                $("#userEmail-info").html("Invalid Email Address.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
             }
-            x = document.getElementById('message').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Message cannot be empty";
-                return false;
-            }
-            //get input field values data to be sent to server
-            document.getElementById('status').innerHTML = "Sending...";
-            formData = {
-                'name': $('input[name=name]').val(),
-                'email': $('input[name=email]').val(),
-                'subject': $('input[name=subject]').val(),
-                'message': $('textarea[name=message]').val()
-            };
 
-
-            $.ajax({
-                url: "mail.php",
-                type: "POST",
-                data: formData,
-                success: function (data, textStatus, jqXHR) {
-
-                    $('#status').text(data.message);
-                    if (data.code) //If mail was sent successfully, reset the form.
-                        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    $('#status').text(jqXHR);
-                }
-            });
+            if (subject == "") {
+                $("#subject-info").html("Required.");
+                $("#subject").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (content == "") {
+                $("#userMessage-info").html("Required.");
+                $("#content").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            return valid;
         }
     </script>
 
