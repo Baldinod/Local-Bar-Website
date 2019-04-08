@@ -1,4 +1,5 @@
-﻿<?php
+<script type="text/php">
+<? php
 if(!empty($_POST["send"])) {
 	$name = $_POST["userName"];
 	$email = $_POST["userEmail"];
@@ -11,8 +12,8 @@ if(!empty($_POST["send"])) {
 	    $message = "Your contact information is received successfully.";
 	    $type = "success";
 	}
-};
-?>
+};?>
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
