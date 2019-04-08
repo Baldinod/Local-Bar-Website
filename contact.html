@@ -1,20 +1,3 @@
-<script type="text/php">
-<? php
-if(!empty($_POST["send"])) {
-	$name = $_POST["userName"];
-	$email = $_POST["userEmail"];
-	$subject = $_POST["subject"];
-	$content = $_POST["content"];
-
-	$toEmail = "somerdalebarandgrill@gmail.com";
-	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
-	if(mail($toEmail, $subject, $content, $mailHeaders)) {
-	    $message = "Your contact information is received successfully.";
-	    $type = "success";
-	}
-};?>
-</script>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +90,7 @@ if(!empty($_POST["send"])) {
                 <!--Section heading-->
                 <h2 class="h1-responsive font-weight-bold text-center fancy"><span class="px-3">GET IN TOUCH</span></h2>
                 <!--Section description-->
-                <p class="text-center w-responsive mx-auto mb-3">Questions or concerns? Contact us! We'll be sure to reply as soon as we can.</p>
+                <p class="text-center w-responsive mx-auto mb-3">Questions or concerns? Contact us! We will be sure to reply as soo as we can.</p>
               <div class="row">
                             <div class="col-md-6" style="padding-right: 7.5px !important; padding-left: 7.5px !important;" id="form_container">
                                 <h2>Contact Us</h2>
