@@ -96,32 +96,39 @@
                  <div class="row pt-4" style="justify-content:center">
                     <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
                         <div class="wrap">
-                           <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwtLUqhQlyX_aWl7kG1J1544MBcsHF8-e--ygLmcICPDfo9h-4/exec">
-                            <div class="row">
-                                <div class="col-sm-12 form-group">
-                                    <label for="message"> Message:</label>
-                                    <textarea class="form-control" type="textarea" name="message" id="message" maxlength="6000" rows="7"></textarea>
+                        <form id="gform" method="POST"
+                            action="https://script.google.com/macros/s/AKfycbwtLUqhQlyX_aWl7kG1J1544MBcsHF8-e--ygLmcICPDfo9h-4/exec">
+                            <div id="mail-form">
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label for="message"> Message:</label>
+                                        <textarea class="form-control" type="textarea" name="message" id="message" maxlength="6000"
+                                            rows="7"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <label for="name"> Your Name:</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <label for="email"> Email:</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <button type="submit" class="btn btn-lg btn-default pull-right">Send &rarr;</button>
+                                    </div>
+                                </div>
+                                <button class="button-success pure-button button-xlarge">
+                                    <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                                <div id="thankyou_message" style="display:none">
+                                    <h4>Thanks! We will get back to you as soon as we can! </h4>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6 form-group">
-                                    <label for="name"> Your Name:</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                    <label for="email"> Email:</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 form-group">
-                                    <button type="submit" class="btn btn-lg btn-default pull-right" >Send &rarr;</button>
-                                </div>
-                            </div>
-                            <div id="thankyou_message" style="display:none">
-                                <h4>Thanks! We will get back to you as soon as we can! </h4>
-                            </div>
-                           </form>
+                        </form>
+                        </form>
                         </div>
                      </div>
                     <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
@@ -158,9 +165,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script data-cfasync="false" type="text/javascript"
-src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-    <script>
+    <script data-cfasync="false" src="form-handler.js"></script>
+<script>
              $(function(){
                       $("#myfooter").load("footer.html"); 
                 }); 
