@@ -95,10 +95,18 @@
                  <div class="row pt-4" style="justify-content:center">
                     <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
                         <div class="wrap">
-                            <form method="POST" action="https://somerdalebarandgrill@gmail.com">
-                               <input type="email" name="email" placeholder="Your email">
-                                <textarea name="message" placeholder="Test Message"></textarea>
-                                 <button type="submit">Send Test</button>
+                            <form action="mailto:somerdalebarandgrill@gmail.com" method="get" enctype="text/plain">
+                                <p>Name: <input type="text" name="name"/></p>
+                                <p>Email: 
+                                    <input type="text" name="email"/>
+                                </p>
+                                            <p>Comments:
+                                           <br />
+                                            <textarea name="comments" rows = "12" cols = "35">Send your comments to the website.</textarea>
+                                            <br>
+                                            <p><input type="submit" name="submit" value="Send" />
+                                             <input type="reset" name="reset" value="Clear Form" />
+                                             </p>
                             </form>
                     <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
                         <div class="wrap text-center">
