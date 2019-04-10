@@ -96,37 +96,16 @@
                  <div class="row pt-4" style="justify-content:center">
                     <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
                         <div class="wrap">
-                        <form id="gform" method="POST"
-                            action="https://script.google.com/macros/s/AKfycbxATuFuvUivUleYUl19bqAP8b5hSVXO2PvSSJ-NlQ/exec">
-                            <div id="mail-form">
-                                <div class="row">
-                                    <div class="col-sm-12 form-group">
-                                        <label for="message"> Message:</label>
-                                        <textarea class="form-control" type="textarea" name="message" id="message" maxlength="6000"
-                                            rows="7"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 form-group">
-                                        <label for="name"> Your Name:</label>
-                                        <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="col-sm-6 form-group">
-                                        <label for="email"> Email:</label>
-                                        <input type="email" class="form-control" id="email" name="email" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 form-group">
-                                        <button type="submit" class="btn btn-lg btn-default pull-right">Send &rarr;</button>
-                                    </div>
-                                </div>
-                                <div id="thankyou_message" style="display:none">
-                                    <h4>Thanks! We will get back to you as soon as we can! </h4>
-                                </div>
-                            </div>
-                        </form>
-                        
+                                <form name="contact" method="post">
+                                        <label>Name</label>
+                                        <input type="text" name="name" />
+                                        <label>Subject</label>
+                                        <input type="text" name="subject" />
+                                        <label>Message</label>
+                                        <textarea name="message"></textarea>
+                                    
+                                        <input type="submit" name="send" value="Send Message" />
+                                    </form>
                         </div>
                      </div>
                     <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
@@ -163,9 +142,38 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script data-cfasync="false" src="form-handler.js"></script>
-    <script dada-cfasync="false" src="message-setup.js"></script>
-<script>
+    <script>
+	var form = document.forms["contact"];
+	form.addEventListener('submit',contact_submit,false);
+
+	function contact_submit(e) {
+		// Stop Form From Submitting
+		e.preventDefault();
+
+		// Set Initial Variables
+		var target = e.target || e.srcElement;
+		var to = 'somerdalebarandgrill@gmail.com';
+		var uri = 'mailto:' + to;
+		var body = '';
+
+		// Set Form Values to Variables
+		var name = target.elements['name'].value;
+		var subject = target.elements['subject'].value;
+		var message = target.elements['message'].value;
+
+		// Build Body / Message with all Input Fields
+		body += message + "\r\n\r\n";
+		body += "Name: " + name + "\r\n";
+
+		// Build final Mailto URI
+		uri += '?subject=' + encodeURIComponent(subject);
+		uri += '&body=' + encodeURIComponent(body);
+
+		// Open Mailto in New Window / Tab
+		window.open(uri,'_blank');
+	}
+    </script>
+    <script>
              $(function(){
                       $("#myfooter").load("footer.html"); 
                 }); 
