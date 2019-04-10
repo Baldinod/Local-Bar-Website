@@ -95,10 +95,37 @@
                  <div class="row pt-4" style="justify-content:center">
                     <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
                         <div class="wrap">
-                            <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-                            <iframe is="x-frame-bypass" src="https://script.google.com/macros/s/AKfycbwxam3zzUT3MVZ4hay_8jGF93gAxcrftYnjH73-kVnRtaLQ28Wj/exec;key=	
-b2ba4684d260c9e0" type=
-text/javascript" height="200" width="300"></iframe>
+                           <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwtLUqhQlyX_aWl7kG1J1544MBcsHF8-e--ygLmcICPDfo9h-4/exec">
+                            <div class="form-bg">
+                                <div class="row">
+                                    <div id="name" class="large-6 medium-6 small-12 columns">
+                                        <label> <h5>Name</h5>
+                                            <input type="text" name="yourName" placeholder="What is you're name?"></input>
+                                        </label>
+                                    </div>
+                    
+                                    <div id="email" class="large-6 medium-6 small-12 columns">
+                                        <label><h5>Email</h5>
+                                            <input type="email" name="yourEmail" placeholder="Please enter in you're email."required></input>
+                                        </label>
+                                        <small class="error">An email Address is required.</small>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div id="message-area" class="large-12 medium-12 small-12 columns">
+                                            <label><h5>Message</h5>
+                                                <textarea id="message" name="yourMessage" placeholder="What's on your mind?"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                    
+                                <div class="row">
+                                    <div id="submit" class="large-3 medium-3 small-3 columns">
+                                        <button name="submit" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                           </form>
                         </div>
                      </div>
                     <div class="col-md-5" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
