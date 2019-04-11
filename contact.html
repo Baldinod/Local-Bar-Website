@@ -97,26 +97,28 @@
                  <div class="row pt-4" style="justify-content:center">
                     <div class="col-md-7" style="padding-right: 7.5px !important; padding-left: 7.5px !important;">
                         <div class="wrap">
-                                <form name="contact" method="post">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <label>Message</label>
-                                            <textarea name="message"></textarea>
+                                <form role="form" method="post" id="reused_form">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="name"> Your Name:</label>
+                                                    <input type="text" class="form-control" id="name" name="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email"> Email:</label>
+                                                    <input type="email" class="form-control" id="email" name="email" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 form-group">
+                                                    <label for="message"> Message:</label>
+                                                    <textarea class="form-control" type="textarea" name="message" id="message" maxlength="6000" rows="7"></textarea>
+                                                </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Name</label>
-                                            <input type="text" name="name" />
+                                        <div class="row">
+                                            <div class="col-sm-12 form-group">
+                                                <button type="submit" class="btn btn-lg btn-default pull-right" >Send &rarr;</button>
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label>Subject</label>
-                                            <input type="text" name="subject" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <input type="submit" name="send" value="Send Message" />
-                                    </div>
                                     </form>
                         </div>
                      </div>
@@ -170,12 +172,14 @@
 
 		// Set Form Values to Variables
 		var name = target.elements['name'].value;
-		var subject = target.elements['subject'].value;
+        var subject = target.elements['subject'].value;
+        var email = target.elements['email'].value;
 		var message = target.elements['message'].value;
 
 		// Build Body / Message with all Input Fields
-		body += message + "\r\n\r\n";
-		body += "Name: " + name + "\r\n";
+		body += "Message" + "\r\n\r\n";
+        body += "Name: " + name + "\r\n";
+        body += "Email: " + email + "\r\n";
 
 		// Build final Mailto URI
 		uri += '?subject=' + encodeURIComponent(subject);
