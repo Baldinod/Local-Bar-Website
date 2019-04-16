@@ -61,7 +61,7 @@
         </div>
     </div>
     <div class="footnote">
-        <p class="text-center p-0">&copy;Somerdale Bar. 2019</p>
+        <p class="text-center p-0">&copy;Somerdale Bar. 2019. <a href="privacy.html"> Privacy</a></p>
     </div>
 </footer>
 <script>
